@@ -1,0 +1,152 @@
+:root {
+    --Transparent-white
+    /*(paragraphs)*/
+    : hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray
+    /*(background, headings, buttons)*/
+    : hsl(0, 0%, 95%);
+}
+
+/* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+    Font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.container {
+    max-width: 1100px;
+    padding: 100px 114px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width:815px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+}
+
+/* End Global Rules */
+
+/* Components */
+
+.col--orange {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.col--cyan {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.col--dark {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.color--orange {
+    color: hsl(31, 77%, 52%);
+}
+
+.color--cyan {
+    color: hsl(184, 100%, 22%);
+}
+
+.color--dark {
+    color: hsl(179, 100%, 13%);
+}
+
+.color--orange:hover {
+    color: white;
+}
+
+.color--cyan:hover {
+    color: white;
+}
+
+.color--dark:hover {
+    color: white;
+}
+
+.border--radius-left {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.border--radius-right {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+@media (max-width:815px) {
+    .border--radius-left {
+        border-radius: 0.5rem 0.5rem 0rem 0rem;
+    }
+
+    .border--radius-right {
+        border-radius: 0rem 0rem 0.5rem 0.5rem;
+    }
+}
+
+/* End Components */
+
+/* Start Cols */
+.cols__col {
+    padding: 2.5rem;
+}
+
+.cols__col_title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+}
+
+.cols__col_desc {
+    color: var(--Transparent-white);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+@media (max-width:815px) {
+    .cols__col_desc {
+        font-size: 1rem;
+    }
+}
+
+.cols__col_btn {
+    background-color: var(--Very-light-gray);
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    width: 9rem;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid white;
+
+}
+
+.cols__col_btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width:815px) {
+    .cols__col_btn {
+        margin-top: 1rem !important;
+        padding: 1rem;
+    }
+}
+
+/* End Cols */
